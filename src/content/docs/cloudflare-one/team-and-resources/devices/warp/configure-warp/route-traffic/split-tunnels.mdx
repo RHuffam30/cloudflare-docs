@@ -49,7 +49,7 @@ If you are using Split Tunnels in Include mode, you must include the following d
 
 #### Block page
 
-If you are using Split Tunnels in Include mode and have [DNS policies](/cloudflare-one/traffic-policies/dns-policies/) with the [block page](/cloudflare-one/traffic-policies/block-page/) enabled, you must include the IPs that blocked domains will resolve to. Unless you are using a [dedicated or BYOIP resolver IP](/cloudflare-one/team-and-resources/devices/agentless/dns/locations/dns-resolver-ips/#dns-resolver-ip) the block page will resolve to:
+If you are using Split Tunnels in Include mode and have [DNS policies](/cloudflare-one/traffic-policies/dns-policies/) with the [block page](/cloudflare-one/reusable-components/custom-pages/gateway-block-page/) enabled, you must include the IPs that blocked domains will resolve to. Unless you are using a [dedicated or BYOIP resolver IP](/cloudflare-one/team-and-resources/devices/agentless/dns/locations/dns-resolver-ips/#dns-resolver-ip) the block page will resolve to:
 
 - `162.159.36.12`
 - `162.159.46.12`
@@ -99,10 +99,10 @@ Due to platform differences, mobile clients can only apply Split Tunnels rules w
 Removing default Split Tunnel entries may cause users to lose Internet connectivity or block their access to local resources.
 :::
 
-1. In [Zero Trust](https://one.dash.cloudflare.com/), go to **Settings** > **WARP Client**.
-2. Under **Device settings**, locate the [device profile](/cloudflare-one/team-and-resources/devices/warp/configure-warp/device-profiles/) you would like to modify and select **Configure**.
+1. In [Cloudflare One](https://one.dash.cloudflare.com/), go to **Team & Resources** > **Devices** > **Device profiles**.
+2. Under **Profiles**, locate the [device profile](/cloudflare-one/team-and-resources/devices/warp/configure-warp/device-profiles/) you would like to modify and select **Edit**.
 3. Under **Split Tunnels**, select **Manage**.
-4. Find the IP address or hostname in the list and select **Delete**.
+4. Find the IP address or hostname in the list and select the **Action** button. From the dropdown, select _Delete_.
 
 <Render file="warp/client-notification-lag" product="cloudflare-one" />
 

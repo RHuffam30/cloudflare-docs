@@ -91,7 +91,7 @@ To use the ICMP proxy with Cloudflare Tunnel, you may need to configure the `clo
     echo 0 10001 | sudo tee /proc/sys/net/ipv4/ping_group_range
     ```
 
-    e. To make the change persist on reboot, update your `systcl` parameters:
+    e. If you need to make the change apply to an already running process, you need to restart `cloudflared`. To make the change persist on reboot, update your `systcl` parameters:
 
     ```sh
     echo "net.ipv4.ping_group_range = 0 10001" | sudo tee -a /etc/sysctl.d/99-cloudflared.conf
@@ -113,7 +113,7 @@ By default the [`cloudflared` Docker container](https://github.com/cloudflare/cl
 
 ## Turn on the Gateway proxy
 
-1. In [Zero Trust](https://one.dash.cloudflare.com), go to **Settings** > **Network**.
-2. In **Firewall**, turn on **Proxy**.
+1. In [Cloudflare One](https://one.dash.cloudflare.com), go to **Traffic policies** > **Traffic settings**.
+2. In **Proxy and inspection settings**, turn on **Allow Secure Web Gateway to proxy traffic**.
 3. Select **TCP**.
 4. (Optional) Depending on your use case, you can select **UDP** and/or **ICMP**.

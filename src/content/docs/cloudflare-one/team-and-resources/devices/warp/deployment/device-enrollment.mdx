@@ -19,7 +19,7 @@ Users can now [enroll their device](/cloudflare-one/team-and-resources/devices/w
 
 ### Check for service token
 
-Instead of requiring users to authenticate with their credentials, you can use a [service token](/cloudflare-one/identity/service-tokens/) to enroll devices without any user interaction. Because users are not required to log in to an identity provider, identity-based policies cannot be enforced on these devices.
+Instead of requiring users to authenticate with their credentials, you can use a [service token](/cloudflare-one/access-controls/service-credentials/service-tokens/) to enroll devices without any user interaction. Because users are not required to log in to an identity provider, identity-based policies cannot be enforced on these devices.
 
 To enroll devices using a service token:
 
@@ -29,7 +29,7 @@ You can verify which devices have enrolled by going to **My Team** > **Devices**
 
 ### Check for mTLS certificate
 
-Enterprise customers can enforce [mutual TLS authentication](/cloudflare-one/reusable-components/posture-checks/access-integrations/mutual-tls-authentication/) during device enrollment.
+Enterprise customers can enforce [mutual TLS authentication](/cloudflare-one/access-controls/service-credentials/mutual-tls-authentication/) during device enrollment.
 
 <Render file="warp/device-enrollment-mtls" product="cloudflare-one" />
 
